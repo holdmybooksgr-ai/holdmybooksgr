@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { CONTACT } from "@/config/contact";
 import { trackClickCall, trackClickEmail } from "@/lib/tracking";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,43 +10,36 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container-wide section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-display font-bold text-xl">H</span>
-              </div>
-              <span className="font-display text-xl font-semibold">
-                {CONTACT.companyName}
-              </span>
-            </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Αξιόπιστη λογιστική υποστήριξη για εταιρείες, με διαφάνεια και πλήρη φορολογική συμμόρφωση.
+            <img src={logo} alt="HoldMyBooks" className="h-10 w-auto brightness-0 invert" />
+            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+              Αναλαμβάνουμε τα λογιστικά της εταιρείας σου. Απλά και ξεκάθαρα.
             </p>
           </div>
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">Υπηρεσίες</h3>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <h3 className="font-semibold">Υπηρεσίες</h3>
+            <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li>
-                <Link to="/ike" className="hover:text-accent transition-colors">
+                <Link to="/ike" className="hover:text-primary-foreground transition-colors">
                   Λογιστικά για ΙΚΕ
                 </Link>
               </li>
               <li>
-                <Link to="/ae" className="hover:text-accent transition-colors">
+                <Link to="/ae" className="hover:text-primary-foreground transition-colors">
                   Λογιστικά για ΑΕ
                 </Link>
               </li>
               <li>
-                <Link to="/epe" className="hover:text-accent transition-colors">
+                <Link to="/epe" className="hover:text-primary-foreground transition-colors">
                   Λογιστικά για ΕΠΕ
                 </Link>
               </li>
               <li>
-                <Link to="/oikodomes" className="hover:text-accent transition-colors">
+                <Link to="/oikodomes" className="hover:text-primary-foreground transition-colors">
                   Οικοδομές & Τεχνικές Εταιρείες
                 </Link>
               </li>
@@ -54,13 +48,13 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">Επικοινωνία</h3>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <h3 className="font-semibold">Επικοινωνία</h3>
+            <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li>
                 <a
                   href={`tel:${CONTACT.phone}`}
                   onClick={trackClickCall}
-                  className="flex items-center gap-2 hover:text-accent transition-colors"
+                  className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="h-4 w-4 shrink-0" />
                   {CONTACT.phoneFormatted}
@@ -70,7 +64,7 @@ export function Footer() {
                 <a
                   href={`mailto:${CONTACT.email}`}
                   onClick={trackClickEmail}
-                  className="flex items-center gap-2 hover:text-accent transition-colors"
+                  className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
                 >
                   <Mail className="h-4 w-4 shrink-0" />
                   {CONTACT.email}
@@ -82,7 +76,7 @@ export function Footer() {
                   href={CONTACT.googleMapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
+                  className="hover:text-primary-foreground transition-colors"
                 >
                   {CONTACT.address}
                 </a>
@@ -96,25 +90,25 @@ export function Footer() {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">Πληροφορίες</h3>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <h3 className="font-semibold">Πληροφορίες</h3>
+            <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li>
-                <Link to="/about" className="hover:text-accent transition-colors">
+                <Link to="/about" className="hover:text-primary-foreground transition-colors">
                   Ποιοι Είμαστε
                 </Link>
               </li>
               <li>
-                <Link to="/epikoinonia" className="hover:text-accent transition-colors">
+                <Link to="/epikoinonia" className="hover:text-primary-foreground transition-colors">
                   Επικοινωνία
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="hover:text-accent transition-colors">
+                <Link to="/privacy" className="hover:text-primary-foreground transition-colors">
                   Πολιτική Απορρήτου
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="hover:text-accent transition-colors">
+                <Link to="/terms" className="hover:text-primary-foreground transition-colors">
                   Όροι Χρήσης
                 </Link>
               </li>
@@ -123,9 +117,9 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-          <p>© {currentYear} {CONTACT.companyName}. Όλα τα δικαιώματα διατηρούνται.</p>
-          <p>Περιοχή εξυπηρέτησης: {CONTACT.serviceArea}</p>
+        <div className="mt-10 pt-6 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/50">
+          <p>© {currentYear} {CONTACT.companyName}</p>
+          <p>Εξυπηρετούμε όλη την Ελλάδα</p>
         </div>
       </div>
     </footer>

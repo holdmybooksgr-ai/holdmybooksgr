@@ -24,72 +24,70 @@ const services = [
   {
     icon: Building2,
     title: "ΙΚΕ & ΕΠΕ",
-    description: "Πλήρης λογιστική υποστήριξη για Ιδιωτικές Κεφαλαιουχικές Εταιρείες και ΕΠΕ.",
+    description: "Λογιστική υποστήριξη για Ιδιωτικές Κεφαλαιουχικές και ΕΠΕ.",
   },
   {
     icon: TrendingUp,
     title: "Ανώνυμες Εταιρείες",
-    description: "Εξειδικευμένες υπηρεσίες για ΑΕ με ισολογισμούς και οικονομικές καταστάσεις.",
+    description: "Ισολογισμοί, οικονομικές καταστάσεις, τακτικός έλεγχος.",
   },
   {
     icon: HardHat,
     title: "Οικοδομές & Έργα",
-    description: "Λογιστική παρακολούθηση τεχνικών εταιρειών, εργολάβων και οικοδομικών έργων.",
+    description: "Τεχνικές εταιρείες, εργολάβοι, κατασκευαστικά.",
   },
   {
     icon: FileSpreadsheet,
-    title: "Φορολογικές Δηλώσεις",
-    description: "ΦΠΑ, φορολογία εισοδήματος και όλες οι εταιρικές υποχρεώσεις.",
+    title: "Φορολογικά",
+    description: "ΦΠΑ, φόρος εισοδήματος, δηλώσεις, myDATA.",
   },
   {
     icon: Users,
     title: "Μισθοδοσία",
-    description: "Διαχείριση μισθοδοσίας, ασφαλιστικές εισφορές και εργατικά θέματα.",
+    description: "ΕΡΓΑΝΗ, ασφαλιστικά, εργατικά θέματα.",
   },
   {
     icon: Calculator,
     title: "Συμβουλευτική",
-    description: "Εταιρική συμβουλευτική για αποφάσεις και φορολογικό σχεδιασμό.",
+    description: "Σχεδιασμός, αποφάσεις, φορολογική στρατηγική.",
   },
 ];
 
 const whyUs = [
-  "Εξειδίκευση σε ΙΚΕ, ΑΕ, ΕΠΕ",
-  "Εμπειρία σε οικοδομές & τεχνικά έργα",
-  "Σαφής τιμολόγηση χωρίς εκπλήξεις",
-  "Άμεση επικοινωνία με υπεύθυνο λογιστή",
-  "Πλήρης συμμόρφωση με νομοθεσία",
+  "Εξειδίκευση σε εταιρείες (ΙΚΕ, ΑΕ, ΕΠΕ)",
+  "Εμπειρία σε τεχνικά έργα & οικοδομές",
+  "Ξεκάθαρη τιμολόγηση από την αρχή",
+  "Άμεση επικοινωνία με τον λογιστή σου",
   "Ψηφιακή διαχείριση παραστατικών",
 ];
 
 const companyTypes = [
-  { name: "ΙΚΕ", href: "/ike", description: "Ιδιωτική Κεφαλαιουχική Εταιρεία" },
+  { name: "ΙΚΕ", href: "/ike", description: "Ιδιωτική Κεφαλαιουχική" },
   { name: "ΑΕ", href: "/ae", description: "Ανώνυμη Εταιρεία" },
-  { name: "ΕΠΕ", href: "/epe", description: "Εταιρεία Περιορισμένης Ευθύνης" },
-  { name: "Οικοδομές", href: "/oikodomes", description: "Τεχνικές Εταιρείες & Εργολάβοι" },
+  { name: "ΕΠΕ", href: "/epe", description: "Περιορισμένης Ευθύνης" },
+  { name: "Οικοδομές", href: "/oikodomes", description: "Τεχνικές & Κατασκευές" },
 ];
 
 const faqs = [
   {
-    question: "Ποιες μορφές εταιρειών εξυπηρετείτε;",
-    answer: "Εξειδικευόμαστε σε ΙΚΕ, ΑΕ, ΕΠΕ καθώς και σε οικοδομικές & τεχνικές εταιρείες. Παρέχουμε ολοκληρωμένη λογιστική υποστήριξη προσαρμοσμένη στις ανάγκες κάθε εταιρικής μορφής.",
+    question: "Ποιες εταιρείες εξυπηρετείτε;",
+    answer: "Εξειδικευόμαστε σε ΙΚΕ, ΑΕ, ΕΠΕ και τεχνικές εταιρείες. Γνωρίζουμε τις ανάγκες κάθε μορφής και προσαρμοζόμαστε.",
   },
   {
-    question: "Πώς λειτουργεί η συνεργασία μας;",
-    answer: "Αρχικά αναλύουμε τις ανάγκες σας και σας δίνουμε σαφή εικόνα του κόστους. Αναλαμβάνουμε όλες τις λογιστικές και φορολογικές υποχρεώσεις της εταιρείας σας με διαφάνεια και συνέπεια.",
+    question: "Πώς ξεκινάμε;",
+    answer: "Συζητάμε τι χρειάζεσαι, σου δίνουμε καθαρή τιμή και αναλαμβάνουμε. Χωρίς γραφειοκρατία.",
   },
   {
-    question: "Τι περιλαμβάνει η λογιστική παρακολούθηση;",
-    answer: "Τήρηση βιβλίων, ΦΠΑ, φορολογικές δηλώσεις, μισθοδοσία (όπου απαιτείται), ισολογισμοί, οικονομικές καταστάσεις και συμβουλευτική υποστήριξη.",
+    question: "Τι περιλαμβάνει η υπηρεσία;",
+    answer: "Τήρηση βιβλίων, ΦΠΑ, δηλώσεις, μισθοδοσία αν χρειάζεται, ισολογισμούς και συμβουλευτική.",
   },
   {
-    question: "Εξυπηρετείτε εταιρείες σε όλη την Ελλάδα;",
-    answer: "Ναι, εξυπηρετούμε εταιρείες σε όλη την Ελλάδα με έμφαση στην Αττική. Η ψηφιακή διαχείριση μας επιτρέπει αποτελεσματική συνεργασία ανεξαρτήτως τοποθεσίας.",
+    question: "Εξυπηρετείτε όλη την Ελλάδα;",
+    answer: "Ναι. Δουλεύουμε ψηφιακά, οπότε η τοποθεσία δεν είναι εμπόδιο. Έμφαση στην Αττική.",
   },
 ];
 
 export default function Home() {
-  // Schema for LocalBusiness
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "AccountingService",
@@ -105,7 +103,7 @@ export default function Home() {
     email: CONTACT.email,
     openingHours: "Mo-Fr 09:00-17:00",
     areaServed: "Ελλάδα",
-    description: "Λογιστικές και φοροτεχνικές υπηρεσίες για ΙΚΕ, ΑΕ, ΕΠΕ και οικοδομικές εταιρείες.",
+    description: "Λογιστικές υπηρεσίες για ΙΚΕ, ΑΕ, ΕΠΕ και τεχνικές εταιρείες.",
   };
 
   return (
@@ -114,40 +112,32 @@ export default function Home() {
         <title>Λογιστικό Γραφείο για Εταιρείες | HoldMyBooks</title>
         <meta
           name="description"
-          content="Αξιόπιστες λογιστικές υπηρεσίες για ΙΚΕ, ΑΕ, ΕΠΕ και τεχνικές εταιρείες. Εξειδίκευση σε οικοδομές. Ζητήστε δωρεάν εκτίμηση."
+          content="Λογιστικές υπηρεσίες για ΙΚΕ, ΑΕ, ΕΠΕ και τεχνικές εταιρείες. Απλά, ξεκάθαρα, χωρίς εκπλήξεις. Ζήτα δωρεάν εκτίμηση."
         />
         <link rel="canonical" href="https://holdmybooks.gr/" />
         <script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative bg-hero-gradient text-primary-foreground overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
-        <div className="container-wide section-padding relative">
-          <div className="max-w-3xl space-y-6 animate-slide-up">
-            <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-              <CheckCircle className="h-4 w-4 text-accent" />
-              <span>Εξειδίκευση σε ΙΚΕ · ΑΕ · ΕΠΕ · Οικοδομές</span>
-            </div>
-
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Λογιστικές Υπηρεσίες για{" "}
-              <span className="text-accent">Εταιρείες</span>
+      <section className="bg-primary text-primary-foreground">
+        <div className="container-wide section-padding">
+          <div className="max-w-2xl space-y-6 animate-slide-up">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              Αναλαμβάνουμε τα λογιστικά της εταιρείας σου
             </h1>
 
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl">
-              Αξιόπιστη λογιστική υποστήριξη για εταιρείες, με διαφάνεια και πλήρη φορολογική συμμόρφωση. 
-              Εστιάζουμε σε αυτό που ξέρουμε καλά.
+            <p className="text-lg text-primary-foreground/80 max-w-xl">
+              Απλά και ξεκάθαρα. Ξέρεις πάντα πού βρίσκεσαι. Χωρίς εκπλήξεις.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button variant="hero" size="xl" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Button variant="hero" size="lg" asChild>
                 <Link to="/epikoinonia">
-                  Ζήτα Δωρεάν Εκτίμηση
+                  Ζήτα προσφορά
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="hero-outline" size="xl" asChild>
+              <Button variant="hero-outline" size="lg" asChild>
                 <a href={`tel:${CONTACT.phone}`} onClick={trackClickCall}>
                   <Phone className="h-5 w-5" />
                   {CONTACT.phoneFormatted}
@@ -164,23 +154,23 @@ export default function Home() {
       {/* Company Types */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
-              Εξυπηρετούμε κάθε τύπο εταιρείας
+          <div className="text-center max-w-xl mx-auto mb-10">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-3">
+              Διάλεξε τον τύπο της εταιρείας σου
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Επιλέξτε τον τύπο της εταιρείας σας για εξειδικευμένες πληροφορίες
+            <p className="text-muted-foreground">
+              Κάθε μορφή έχει τις δικές της ανάγκες. Εμείς τις ξέρουμε.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {companyTypes.map((type) => (
               <Link
                 key={type.name}
                 to={type.href}
-                className="group p-6 bg-card rounded-xl border border-border shadow-subtle hover:shadow-elegant hover:border-accent/50 transition-all duration-300 text-center"
+                className="group p-5 bg-card rounded-lg border border-border hover:border-primary/30 transition-colors text-center"
               >
-                <h3 className="font-display text-2xl font-bold text-primary group-hover:text-accent transition-colors mb-2">
+                <h3 className="text-xl font-bold text-primary mb-1">
                   {type.name}
                 </h3>
                 <p className="text-sm text-muted-foreground">{type.description}</p>
@@ -191,18 +181,18 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-muted/50">
         <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">
+          <div className="text-center max-w-xl mx-auto mb-10">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-3">
               Τι αναλαμβάνουμε
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Ολοκληρωμένες λογιστικές & φοροτεχνικές υπηρεσίες για την εταιρεία σας
+            <p className="text-muted-foreground">
+              Όλα όσα χρειάζεται η εταιρεία σου, σε ένα μέρος.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
@@ -213,69 +203,58 @@ export default function Home() {
       {/* Why Us */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="space-y-6">
-              <h2 className="font-display text-3xl md:text-4xl font-semibold">
-                Γιατί <span className="text-accent">HoldMyBooks</span>
+              <h2 className="text-2xl md:text-3xl font-semibold">
+                Γιατί HoldMyBooks
               </h2>
-              <p className="text-muted-foreground text-lg">
-                Εστιάζουμε στις ανάγκες των εταιρειών με επαγγελματισμό και συνέπεια. 
-                Γνωρίζουμε τις ιδιαιτερότητες κάθε εταιρικής μορφής.
+              <p className="text-muted-foreground">
+                Δεν είμαστε για όλους. Είμαστε για εταιρείες που θέλουν αξιόπιστη δουλειά, χωρίς περιττά λόγια.
               </p>
 
-              <ul className="grid gap-4">
+              <ul className="space-y-3">
                 {whyUs.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-success shrink-0" />
-                    <span className="font-medium">{item}</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
 
               <Button variant="cta" size="lg" asChild>
                 <Link to="/epikoinonia">
-                  Μάθε Περισσότερα
+                  Μίλα μαζί μας
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
             </div>
 
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl p-8 border border-border">
-                <div className="space-y-6">
-                  <div className="bg-card rounded-xl p-6 shadow-card">
-                    <h3 className="font-display text-xl font-semibold mb-2">
-                      Συνηθισμένα λάθη που κοστίζουν
-                    </h3>
-                    <ul className="space-y-3 text-sm text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <span className="text-destructive font-bold">✗</span>
-                        <span>Καθυστερημένες δηλώσεις που φέρνουν πρόστιμα</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-destructive font-bold">✗</span>
-                        <span>Λάθη σε ΦΠΑ που απαιτούν τροποποιητικές</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-destructive font-bold">✗</span>
-                        <span>Ελλιπής τεκμηρίωση σε τεχνικά έργα</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-destructive font-bold">✗</span>
-                        <span>Χαμένες φορολογικές ελαφρύνσεις</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-primary text-primary-foreground rounded-xl p-6">
-                    <p className="text-sm font-medium">
-                      "Λογιστική υποστήριξη με επαγγελματισμό & συνέπεια"
-                    </p>
-                    <p className="text-xs text-primary-foreground/70 mt-2">
-                      — Η δέσμευσή μας
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-muted/50 rounded-xl p-6 border border-border">
+              <h3 className="font-semibold mb-4">
+                Λάθη που βλέπουμε συχνά
+              </h3>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-destructive font-bold">✗</span>
+                  <span>Καθυστερήσεις που φέρνουν πρόστιμα</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-destructive font-bold">✗</span>
+                  <span>Λάθη σε ΦΠΑ που θέλουν διορθώσεις</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-destructive font-bold">✗</span>
+                  <span>Ελλιπής τεκμηρίωση σε έργα</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-destructive font-bold">✗</span>
+                  <span>Χαμένες ευκαιρίες για εκπτώσεις</span>
+                </li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-border">
+                <p className="text-sm text-muted-foreground">
+                  Με σωστή οργάνωση, αυτά αποφεύγονται.
+                </p>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Loader2, Send, CheckCircle } from "lucide-react";
+import { Loader2, Send } from "lucide-react";
 import { trackFormSubmit } from "@/lib/tracking";
 import { toast } from "sonner";
 
@@ -17,7 +17,6 @@ const leadSchema = z.object({
   phone: z.string().min(10, "Το τηλέφωνο είναι υποχρεωτικό").max(15),
   company: z.string().max(200).optional(),
   message: z.string().max(1000).optional(),
-  // Honeypot field
   website: z.string().max(0).optional(),
 });
 
@@ -41,17 +40,13 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
   });
 
   const onSubmit = async (data: LeadFormData) => {
-    // Honeypot check
     if (data.website) {
-      console.log("Bot detected");
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-      // For now, we'll store in localStorage and show success
-      // In production, this would call an edge function
       const leads = JSON.parse(localStorage.getItem("hmb_leads") || "[]");
       leads.push({
         ...data,
@@ -60,20 +55,17 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
       });
       localStorage.setItem("hmb_leads", JSON.stringify(leads));
 
-      // Track the conversion
       trackFormSubmit();
 
-      // Show success toast
-      toast.success("Η αίτησή σας υποβλήθηκε επιτυχώς!", {
-        description: "Θα επικοινωνήσουμε σύντομα μαζί σας.",
+      toast.success("Ευχαριστούμε!", {
+        description: "Θα επικοινωνήσουμε μαζί σου σύντομα.",
       });
 
-      // Redirect to thank you page
       navigate("/thank-you");
     } catch (error) {
       console.error("Form submission error:", error);
       toast.error("Κάτι πήγε στραβά", {
-        description: "Παρακαλώ δοκιμάστε ξανά ή καλέστε μας.",
+        description: "Δοκίμασε ξανά ή κάλεσέ μας.",
       });
     } finally {
       setIsSubmitting(false);
@@ -81,20 +73,19 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-      {/* Honeypot field - hidden from users */}
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div className="hidden" aria-hidden="true">
         <Input type="text" {...register("website")} tabIndex={-1} autoComplete="off" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="space-y-2">
-          <Label htmlFor="name" className="text-sm font-medium">
+        <div className="space-y-1.5">
+          <Label htmlFor="name" className="text-sm">
             Όνομα *
           </Label>
           <Input
             id="name"
-            placeholder="Το όνομά σας"
+            placeholder="Το όνομά σου"
             {...register("name")}
             className={errors.name ? "border-destructive" : ""}
           />
@@ -103,8 +94,8 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
           )}
         </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="phone" className="text-sm font-medium">
+        <div className="space-y-1.5">
+          <Label htmlFor="phone" className="text-sm">
             Τηλέφωνο *
           </Label>
           <Input
@@ -120,8 +111,8 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
         </div>
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="email" className="text-sm font-medium">
+      <div className="space-y-1.5">
+        <Label htmlFor="email" className="text-sm">
           Email *
         </Label>
         <Input
@@ -136,8 +127,8 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
         )}
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="company" className="text-sm font-medium">
+      <div className="space-y-1.5">
+        <Label htmlFor="company" className="text-sm">
           Εταιρεία
         </Label>
         <Input
@@ -148,14 +139,14 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
       </div>
 
       {!compact && (
-        <div className="space-y-2">
-          <Label htmlFor="message" className="text-sm font-medium">
+        <div className="space-y-1.5">
+          <Label htmlFor="message" className="text-sm">
             Μήνυμα
           </Label>
           <Textarea
             id="message"
-            placeholder="Πείτε μας τι χρειάζεστε... (προαιρετικό)"
-            rows={4}
+            placeholder="Πες μας τι χρειάζεσαι..."
+            rows={3}
             {...register("message")}
           />
         </div>
@@ -176,13 +167,13 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
         ) : (
           <>
             <Send className="h-5 w-5" />
-            Ζήτα Δωρεάν Εκτίμηση
+            Ζήτα προσφορά
           </>
         )}
       </Button>
 
       <p className="text-xs text-muted-foreground text-center">
-        Με την υποβολή της φόρμας συμφωνείτε με την{" "}
+        Με την υποβολή συμφωνείς με την{" "}
         <a href="/privacy" className="underline hover:text-foreground">
           Πολιτική Απορρήτου
         </a>
