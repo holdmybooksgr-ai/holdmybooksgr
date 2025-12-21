@@ -66,7 +66,7 @@ serve(async (req) => {
     try {
       await resend.emails.send({
         from: "HoldMyBooks <onboarding@resend.dev>",
-        to: ["holdmybooksgr@gmail.com"],
+        to: ["edresathens@gmail.com"],
         subject: `Νέο Lead: ${lead.name}`,
         html: `
           <h2>Νέο αίτημα επικοινωνίας</h2>
@@ -84,11 +84,12 @@ serve(async (req) => {
       console.error("Notification email error:", emailError);
     }
 
-    // Send auto-reply to customer
+    // Send auto-reply to admin email (since domain not verified, can only send to own email)
+    // TODO: Once domain is verified at resend.com/domains, change this back to lead.email
     try {
       await resend.emails.send({
         from: "HoldMyBooks <onboarding@resend.dev>",
-        to: [lead.email],
+        to: ["edresathens@gmail.com"],
         subject: "Λάβαμε το μήνυμά σου | HoldMyBooks",
         html: `
           <h2>Γεια σου ${lead.name}!</h2>

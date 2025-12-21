@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { AuthProvider } from "@/hooks/useAuth";
 
 import Home from "./pages/Home";
 import IKEPage from "./pages/IKEPage";
@@ -15,6 +16,8 @@ import ThankYouPage from "./pages/ThankYouPage";
 import AboutPage from "./pages/AboutPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import AuthPage from "./pages/AuthPage";
+import AdminPage from "./pages/AdminPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,25 +25,29 @@ const queryClient = new QueryClient();
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/ike" element={<IKEPage />} />
-            <Route path="/ae" element={<AEPage />} />
-            <Route path="/epe" element={<EPEPage />} />
-            <Route path="/oikodomes" element={<OikodomesPage />} />
-            <Route path="/epikoinonia" element={<ContactPage />} />
-            <Route path="/thank-you" element={<ThankYouPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </TooltipProvider>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/ike" element={<IKEPage />} />
+              <Route path="/ae" element={<AEPage />} />
+              <Route path="/epe" element={<EPEPage />} />
+              <Route path="/oikodomes" element={<OikodomesPage />} />
+              <Route path="/epikoinonia" element={<ContactPage />} />
+              <Route path="/thank-you" element={<ThankYouPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/auth" element={<AuthPage />} />
+              <Route path="/admin" element={<AdminPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </TooltipProvider>
+        </BrowserRouter>
+      </AuthProvider>
     </QueryClientProvider>
   </HelmetProvider>
 );

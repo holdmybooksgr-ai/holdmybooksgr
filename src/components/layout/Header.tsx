@@ -49,7 +49,7 @@ export function Header() {
       {/* Main navigation */}
       <nav className="container-wide flex items-center justify-between py-4">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="HoldMyBooks" className="h-10 w-auto" />
+          <img src={logo} alt="HoldMyBooks" className="h-14 md:h-16 w-auto" />
         </Link>
 
         {/* Desktop navigation */}
