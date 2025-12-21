@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Loader2, Send } from "lucide-react";
 import { trackFormSubmit } from "@/lib/tracking";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const leadSchema = z.object({
   name: z.string().min(2, "Το όνομα είναι υποχρεωτικό").max(100),
@@ -30,6 +31,7 @@ interface LeadFormProps {
 export function LeadForm({ source = "website", compact = false }: LeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const {
     register,
@@ -40,6 +42,7 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
   });
 
   const onSubmit = async (data: LeadFormData) => {
+    // Honeypot check
     if (data.website) {
       return;
     }
@@ -47,13 +50,20 @@ export function LeadForm({ source = "website", compact = false }: LeadFormProps)
     setIsSubmitting(true);
 
     try {
-      const leads = JSON.parse(localStorage.getItem("hmb_leads") || "[]");
-      leads.push({
-        ...data,
-        source,
-        timestamp: new Date().toISOString(),
+      const { error } = await supabase.functions.invoke("submit-lead", {
+        body: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          company: data.company || undefined,
+          message: data.message || undefined,
+          sourcePage: source || location.pathname,
+        },
       });
-      localStorage.setItem("hmb_leads", JSON.stringify(leads));
+
+      if (error) {
+        throw error;
+      }
 
       trackFormSubmit();
 
