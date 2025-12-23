@@ -66,7 +66,7 @@ serve(async (req) => {
     try {
       await resend.emails.send({
         from: "HoldMyBooks <onboarding@resend.dev>",
-        to: ["edresathens@gmail.com"],
+        to: ["holdmybooks@gmail.com"],
         subject: `Νέο Lead: ${lead.name}`,
         html: `
           <h2>Νέο αίτημα επικοινωνίας</h2>
@@ -89,7 +89,7 @@ serve(async (req) => {
     try {
       await resend.emails.send({
         from: "HoldMyBooks <onboarding@resend.dev>",
-        to: ["edresathens@gmail.com"],
+        to: ["holdmybooks@gmail.com"],
         subject: "Λάβαμε το μήνυμά σου | HoldMyBooks",
         html: `
           <h2>Γεια σου ${lead.name}!</h2>
