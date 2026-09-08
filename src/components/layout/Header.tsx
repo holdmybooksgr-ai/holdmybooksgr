@@ -4,7 +4,7 @@ import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/config/contact";
 import { trackClickCall, trackClickEmail } from "@/lib/tracking";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/holdmybooks-logo.png";
 
 const navigation = [
   { name: "Αρχική", href: "/" },
@@ -47,13 +47,13 @@ export function Header() {
       </div>
 
       {/* Main navigation */}
-      <nav className="container-wide flex items-center justify-between py-4">
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="HoldMyBooks" className="h-14 md:h-16 w-auto" />
+      <nav className="container-wide flex items-center justify-between gap-6 py-3">
+        <Link to="/" className="flex shrink-0 items-center" aria-label="HoldMyBooks — Αρχική">
+          <img src={logo} alt="HoldMyBooks — Accounting with Clarity and Trust" className="h-16 w-auto object-contain md:h-20" />
         </Link>
 
         {/* Desktop navigation */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center justify-center gap-5">
           {navigation.map((item) => (
             <Link
               key={item.name}

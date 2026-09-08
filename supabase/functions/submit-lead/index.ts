@@ -100,8 +100,8 @@ serve(async (req) => {
           <hr/>
           <p><small>
             HoldMyBooks - Λογιστικές Υπηρεσίες<br/>
-            Μύστρα 61, Γλυφάδα<br/>
-            Τηλ: 6973519478<br/>
+            Corfu, Greece<br/>
+            Τηλ: 6987992362<br/>
             Email: holdmybooksgr@gmail.com
           </small></p>
         `,

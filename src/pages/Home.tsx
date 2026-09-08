@@ -94,9 +94,7 @@ export default function Home() {
     name: CONTACT.companyName,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Μύστρα 61",
-      addressLocality: "Γλυφάδα",
-      addressRegion: "Αττική",
+      addressLocality: "Corfu",
       addressCountry: "GR",
     },
     telephone: CONTACT.phone,

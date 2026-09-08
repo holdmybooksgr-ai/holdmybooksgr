@@ -107,14 +107,14 @@ export default function ContactPage() {
               {/* Map */}
               <div className="rounded-xl overflow-hidden border border-border h-[300px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.5!2d23.75!3d37.87!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3f7b9e5c7b%3A0x0!2sMistra%2061%2C%20Glyfada!5e0!3m2!1sel!2sgr!4v1234567890"
+                  src={CONTACT.googleMapsEmbed}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="HoldMyBooks Location"
+                  title="HoldMyBooks — Corfu, Greece"
                 ></iframe>
               </div>
             </div>
