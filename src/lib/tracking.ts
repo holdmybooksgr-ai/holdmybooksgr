@@ -70,7 +70,7 @@ export const trackFormSubmit = (): void => {
 
 export const trackClickCall = (): void => {
   trackEvent("click_call", {
-    phone_number: "6973519478",
+    phone_number: "6987992362",
   });
 };
 

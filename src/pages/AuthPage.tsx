@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/holdmybooks-logo.png";
 
 const authSchema = z.object({
   email: z.string().email("Μη έγκυρο email"),
@@ -92,7 +92,7 @@ export default function AuthPage() {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
-          <img src={logo} alt="HoldMyBooks" className="h-16 mx-auto mb-6" />
+          <img src={logo} alt="HoldMyBooks — Accounting with Clarity and Trust" className="h-20 w-auto max-w-full object-contain mx-auto mb-6" />
           <h1 className="text-2xl font-bold text-foreground">
             {isLogin ? "Σύνδεση" : "Εγγραφή"}
           </h1>

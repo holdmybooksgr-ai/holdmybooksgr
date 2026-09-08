@@ -12,7 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { LogOut, RefreshCw, Mail, Phone, Building, MessageSquare } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/holdmybooks-logo.png";
 
 interface Lead {
   id: string;
@@ -79,7 +79,7 @@ export default function AdminPage() {
   if (!isAdmin) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4">
-        <img src={logo} alt="HoldMyBooks" className="h-16 mb-6" />
+        <img src={logo} alt="HoldMyBooks — Accounting with Clarity and Trust" className="h-20 w-auto max-w-full object-contain mb-6" />
         <h1 className="text-2xl font-bold text-foreground mb-2">Δεν έχετε πρόσβαση</h1>
         <p className="text-muted-foreground mb-6">
           Χρειάζεστε δικαιώματα διαχειριστή για να δείτε αυτή τη σελίδα.
@@ -98,7 +98,7 @@ export default function AdminPage() {
       <header className="bg-card border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <img src={logo} alt="HoldMyBooks" className="h-12" />
+            <img src={logo} alt="HoldMyBooks — Accounting with Clarity and Trust" className="h-14 w-auto object-contain" />
             <h1 className="text-xl font-bold text-foreground">Admin Dashboard</h1>
           </div>
           <div className="flex items-center gap-3">

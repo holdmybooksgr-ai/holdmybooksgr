@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { CONTACT } from "@/config/contact";
 import { trackClickCall, trackClickEmail } from "@/lib/tracking";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/holdmybooks-logo.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <img src={logo} alt="HoldMyBooks" className="h-10 w-auto brightness-0 invert" />
+            <div className="inline-flex items-center rounded-md bg-primary-foreground p-2">
+              <img src={logo} alt="HoldMyBooks — Accounting with Clarity and Trust" className="h-14 w-auto object-contain" />
+            </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Αναλαμβάνουμε τα λογιστικά της εταιρείας σου. Απλά και ξεκάθαρα.
             </p>
